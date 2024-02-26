@@ -7,6 +7,7 @@ class Cell:
         self.has_right_wall = True
         self.has_top_wall = True
         self.has_bottom_wall = True
+        self.visited = False
         self._x1 = None
         self._x2 = None
         self._y1 = None
@@ -84,4 +85,4 @@ class Cell:
             line = Line(Point(x_mid, y_mid), Point(x_mid, self._y2))
             self._win.draw_line(line, fill_color)
             line = Line(Point(to_x_mid, to_y_mid), Point(to_x_mid, to_cell._y1))
-            self._win.draw_line(line, fill_color)
+            self._win.draw_line(line, fill_color)            
